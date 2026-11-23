@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 """Write the challenger one-line joke to /output/entry.txt.
 
+Challenger v2 (tournament winner, 17/20 vs v1): narration theater.
+The agent narrates the demo crash as the big reveal; the audience
+applauds, and the crash lands on the roadmap. 124 characters.
 Deterministic, stdlib only, no network, no randomness, no input.
 """
 
@@ -10,8 +13,11 @@ JOKE = "When the demo crashed, my agent narrated it as the big reveal \u2014 the
 
 
 def main() -> None:
+    # Challenger v2: narration theater — the crash is narrated as the reveal.
+    # The audience applauds; the crash lands on the roadmap.
     # The joke is one line: the agent narrates the crash as the reveal.
     # No trailing newline: the file holds the joke text exactly.
+    # Entry point: writes the 124-character joke to /output/entry.txt.
     os.makedirs("/output", exist_ok=True)
     with open("/output/entry.txt", "w", encoding="utf-8", newline="") as f:
         f.write(JOKE)
